@@ -1,5 +1,8 @@
 USE employees;
 
+SELECT DISTINCT title
+FROM titles;
+
 SELECT DISTINCT last_name
 FROM employees
 ORDER BY last_name DESC;
@@ -8,18 +11,12 @@ SELECT salary, emp_no
 FROM salaries
 ORDER BY salary DESC;
 
-SELECT salary, emp_no
+SELECT emp_no
 FROM salaries
-ORDER BY salary DESC LIMIT 5 OFFSET 0;
+ORDER BY salary
+LIMIT 5;
 
-SELECT salary, emp_no
+SELECT emp_no
 FROM salaries
-ORDER BY salary DESC LIMIT 5 OFFSET 5;
-
-SELECT salary, emp_no
-FROM salaries
-ORDER BY salary DESC LIMIT 5 OFFSET 10;
-
-SELECT salary, emp_no
-FROM salaries
-ORDER BY salary DESC LIMIT 5 OFFSET 15;
+ORDER BY salary DESC
+LIMIT 5 OFFSET 45;
